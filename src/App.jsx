@@ -4,6 +4,7 @@ import { history } from '_helpers';
 import { Nav, PrivateRoute } from '_components';
 import { Home } from 'home';
 import { Login } from 'login';
+import { AddCard } from 'add-card';
 
 export { App };
 
@@ -23,6 +24,14 @@ function App() {
                         element={
                             <PrivateRoute>
                                 <Home />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/add-card"
+                        element={
+                            <PrivateRoute>
+                                <AddCard />
                             </PrivateRoute>
                         }
                     />
